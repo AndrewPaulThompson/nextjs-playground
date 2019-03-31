@@ -1,0 +1,69 @@
+@import 'globals/sass/main.scss';
+
+.nav {
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+    &--desktop {
+        justify-content: space-between;
+        display: none;
+
+        @include respond-to(S) {
+            display: flex;
+            margin: 0 2rem;
+        }
+    }
+
+    &--mobile {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        @include respond-to(S) {
+            display: none;
+        }
+    }
+
+    &__links {
+        z-index: 1;
+        justify-content: space-around;
+        display: flex;
+        width: 100%;
+
+        @include respond-to(S) {
+            width: auto;
+        }
+    }
+
+    &__link {
+        color: #adadad;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        @include respond-to(S) {
+            margin-right: 35px;
+        }
+
+        &:hover {
+            color: #727272;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &__logo {
+        font-size: 24px;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        height: 50px;
+
+        @include respond-to(S) {
+            height: auto;
+            position: absolute;
+        }
+    }
+}

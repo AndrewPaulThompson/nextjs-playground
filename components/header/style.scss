@@ -1,0 +1,19 @@
+@import 'globals/sass/main.scss';
+
+.header {
+    min-width: map-get($breakpoints, default);
+    background: white;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.06);
+
+    &__container {
+        height: 96px;
+        display: flex;
+        pointer-events: auto;
+        max-width: 1024px;
+        margin: 0 auto;
+
+        @include respond-to(S) {
+            height: 64px;
+        }
+    }
+}
