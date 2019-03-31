@@ -1,15 +1,2 @@
-$breakpoints: (
-  default: 320px,
-  XS: 576px,
-  S: 768px,
-  M: 992px,
-  L: 1200px
-);
-
-@mixin respond-to($breakpoint) { 
-    @if map-has-key($breakpoints, $breakpoint) {
-      @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
-        @content;
-      }
-    }
-}
+@import './variables.scss';
+@import './mixins.scss';

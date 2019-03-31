@@ -37,7 +37,7 @@
     }
 
     &__link {
-        color: #adadad;
+        color: $main-link;
         text-decoration: none;
         transition: color 0.2s ease;
 
@@ -46,7 +46,7 @@
         }
 
         &:hover {
-            color: #727272;
+            color: $main-link-hover;
         }
 
         &:last-of-type {
